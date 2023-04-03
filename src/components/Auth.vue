@@ -16,6 +16,7 @@
               :error-messages="v$.password.$errors.map(e => e.$message)"
               :counter="10"
               label="Password"
+              type="password"
               required
               @input="v$.password.$touch"
               @blur="v$.password.$touch"
