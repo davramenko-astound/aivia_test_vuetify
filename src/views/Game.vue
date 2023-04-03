@@ -13,7 +13,6 @@
       </v-row>
   
       <v-row>
-        <v-col cols="12">
           <div class="grid-container" >
             <div v-for="(row, y) in state.grid" :key="y" class="grid-row">
               <div v-for="(col, x) in row" :key="x"
@@ -23,15 +22,12 @@
               ></div>
             </div>
           </div>
-        </v-col>
       </v-row>
     </v-container>
   </template>
   
   <script>
   import { reactive } from 'vue';
-  import _ from "lodash";
-  //  @mouseover="toggleCell(rowIndex, cellIndex)">
   export default {
     name: 'Grid',
     setup() {
@@ -77,6 +73,7 @@
         display: flex;
         flex-wrap: wrap;
         background: #000;
+        padding: 15px;
     }
     .grid-square {
         width: 36px;
